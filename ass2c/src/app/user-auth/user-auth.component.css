@@ -1,0 +1,11 @@
+.sign-up {
+  text-align: center;
+}
+.sign-up h1 {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  color: blueviolet;
+}
+a {
+  cursor: pointer;
+}

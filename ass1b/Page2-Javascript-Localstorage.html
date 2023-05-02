@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .div {
+      display: flex;
+      margin-top: 1rem;
+    }
+    p {
+      margin-top: -1px;
+      margin-left: 1rem;
+    }
+  </style>
+  <body>
+    <div class="div">
+      <label for="fname">First Name : </label>
+      <p id="fname"></p>
+    </div>
+
+    <div class="div">
+      <label for="lname">Last Name : </label>
+      <p id="lname"></p>
+    </div>
+    <div class="div">
+      <label for="email">Email : </label>
+      <p id="email"></p>
+    </div>
+    <div class="div">
+      <label for="phone"> Phone : </label>
+      <p id="phone"></p>
+    </div>
+    <div class="div">
+      <label for="gender">Gender : </label>
+      <p id="gender"></p>
+    </div>
+    <script>
+      document.getElementById("fname").innerHTML =
+        localStorage.getItem("fnamevalue");
+      document.getElementById("lname").innerHTML =
+        localStorage.getItem("lnamevalue");
+      document.getElementById("email").innerHTML =
+        localStorage.getItem("emailvalue");
+      document.getElementById("phone").innerHTML =
+        localStorage.getItem("phonevalue");
+
+      if (!localStorage.getItem("mgendervalue")) {
+        document.getElementById("gender").innerHTML =
+          localStorage.getItem("fgendervalue");
+      } else {
+        document.getElementById("gender").innerHTML =
+          localStorage.getItem("mgendervalue");
+      }
+    </script>
+  </body>
+</html>

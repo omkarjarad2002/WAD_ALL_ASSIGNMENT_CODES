@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" /> 
+    <style>
+    
+h2{
+          font-family: Sans-serif; 
+          font-size: 24px;         
+          font-style: normal; 
+          font-weight: bold;  
+          text-align: center; }
+table{
+  font-family: verdana; 
+  color:white; 
+  font-size: 16px; 
+  font-style: normal;
+  font-weight: bold;
+  background-color: #ff4242; 
+  border-collapse: collapse; 
+  border: 1px solid #000000;
+  border-style: dashed;
+  
+}
+table.inner{
+  border: 10px
+}
+input[type=text], input[type=email], input[type=number]{
+  width: 100%;
+  padding: 6px 12px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+input[type=submit], input[type=reset]{
+  width: 15%;
+  padding: 8px 12px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+.submit_btn{
+  font-family: sans-serif;
+  height: 30px;
+  width: 100px;
+  margin: 4px;
+  cursor: pointer;
+  background-color: aqua;
+  border: 1px solid aqua;
+  border-radius: 4px;
+}
+.reset_btn{
+  font-family: sans-serif;
+  margin: 4px;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  background-color: aqua;
+  border: 1px solid aqua;
+  border-radius: 4px;
+}
+.submit_btn:hover{ 
+  background-color: rgb(6, 197, 197);
+  border: 1px solid rgb(6, 197, 197); 
+}
+.reset_btn:hover{
+  background-color: rgb(6, 197, 197);
+  border: 1px solid rgb(6, 197, 197); 
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div> 
+        <form action="Page2-Javascript-Localstorage.html">
+            <h2>Student Registration Form</h3>
+            <table align="center" cellpadding = "10"> 
+            <tr>
+            <td>First Name</td>
+            <td> 
+                <input type="text" name="FirstName" id="FirstName" maxlength="50" placeholder="omkar" /> 
+            
+            </td>
+            </tr> 
+            <tr>
+            <td>Last Name</td>
+            <td><input type="text" name="LastName" id="LastName" maxlength="50" placeholder="jarad"/> 
+            </td>
+            </tr> 
+            <tr>
+            <td>Email ID</td>
+            <td><input type="email" name="EmailID" id="EmailID" maxlength="100" placeholder="yghanendra@gmail.com"/></td>
+            </tr>   
+            <tr>
+            <td>Mobile Number</td>
+            <td>
+            <input type="text" name="MobileNumber" id="MobileNumber" maxlength="10" placeholder="9373xxxxxx"/> 
+            </td>
+            </tr>
+            <!---------------------- Gender ------------------------------------->
+            <tr>
+            <td>Gender</td>
+            <td>
+            <input type="radio" name="Gender" id="MGender" value="Male" />
+            Male
+            <input type="radio" name="Gender" id="FGender" value="Female" />
+            Female
+            </td>
+            </tr> 
+        </form>
+       
+    <!----------------------- Submit and Reset ------------------------------->
+<tr>
+    <td colspan="2" align="center">
+    <Button class="submit_btn" id="submitBtn" onclick=submitData() type="submit" value="Submit">Submit</Button> 
+    </td>
+    </tr>
+    </table> 
+    </body>
+    </html>
+    </div>
+    <script>
+       function submitData(){ 
+        let first_name = document.getElementById("FirstName").value;
+        let last_name = document.getElementById("LastName").value;
+        let email = document.getElementById("EmailID").value;
+        let phone = document.getElementById("MobileNumber").value;
+        let mgender = document.getElementById("MGender").value;
+        let fgender = document.getElementById("FGender").value;
+        localStorage.setItem('fnamevalue',first_name);
+        localStorage.setItem('lnamevalue',last_name);
+        localStorage.setItem('emailvalue',email);
+        localStorage.setItem('phonevalue',phone);
+        localStorage.setItem('mgendervalue',mgender);
+        localStorage.setItem('fgendervalue',fgender);
+        return false;
+       }
+ 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="container_in">
+    <h2>Profile</h2>
+    <p>Name : {{ userName }}</p>
+    <p>Email : {{ userEmail }}</p>
+    <p>Password : {{ userPassword }}</p>
+    <button type="button">
+      <a routerLink="/seller-auth" (click)="logOut()">Logout</a>
+    </button>
+    <button type="button">
+      <a routerLink="/seller-auth" (click)="removeAccount()">Remove Account</a>
+    </button>
+  </div>
+</div>
